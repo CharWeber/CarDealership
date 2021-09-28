@@ -1,0 +1,33 @@
+@using Dealer.Models
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Dealership</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <h1> welcome to the car show </h1>
+    <p>would you like to narrow down the search?</p>
+    <p> input your max price and we will narrow it down for you</p>
+    
+    <form action="/Car/Index" method="post">
+    <label for="maxPrice">Input Price max here</label>
+    <input id="maxPrice" name="maxPrice" type="number">
+    <button class="btn btn-primary" type="submit">submit</button>
+    </form>
+    
+    <h3> here is our available cars!</h3>
+    <ul id="carList">
+    @foreach (Car car in Model)
+    {
+      <li>@car.MakeModel</li>
+      <li>@car.Price</li>
+      <li>@car.Miles</li>
+    }
+    </ul>
+  </div>
+</body>
+</html>

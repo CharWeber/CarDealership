@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace Dealer.Models
 {
-  public class Cars
+  public class Car
   {
     public string MakeModel {get; set;}
     public int Price {get; set;}
     public int Miles {get; set;}
     private static List <Car> _inventory = new List<Car> {};
 
-    public Car (string makeModel, int price, int miles)
+    public Car(string makeModel, int price, int miles)
     {
-      Makemodel = makeModel;
+      MakeModel = makeModel;
       Price = price;
       Miles = miles;
       _inventory.Add(this);
@@ -28,7 +28,7 @@ namespace Dealer.Models
     }
     public bool WorthBuying (int maxPrice)
     {
-      _price = maxPrice;
+      return (Price <= maxPrice);
     }
   }
 }
