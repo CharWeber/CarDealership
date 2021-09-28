@@ -1,0 +1,31 @@
+car dealership:
+
+car constructor with getters and setters and private properties
+
+properties:
+string makeModel = 
+int price = 
+int miles = {get;set;}
+list <cars> _inv = new List <Cars>
+
+method WorthBuying(int maxPrice)
+ return (price <= Maxprice)
+
+
+html:
+
+index "splash page" max price input - Home directory
+    route form to get maxprice from users - Car directory
+    route to car lot - Index => Car directory
+
+we'll have cars:
+
+  user => homepage:
+        they see: welcome!
+                  Here are our cars!
+                  give them the option to narrow down search by maxPrice
+
+Car volkswagen = new Car("1974 Volkswagen Thing", 1100, 368792);
+Car yugo = new Car("1980 Yugo Koral", 700, 56000);        
+Car ford = new Car("1988 Ford Country Squire", 1400, 239001);
+Car amc = new Car("1976 AMC Pacer", 400, 198000);             
